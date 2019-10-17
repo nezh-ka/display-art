@@ -1,0 +1,12 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-primary: #55c57a;
+    --color-grey: #777;
+    --margin-bottom: 3rem;
+    --margin-right: 2.5rem;
+}
+
+html {
+    --font-size: 62.5%;
+}
