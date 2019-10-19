@@ -3,9 +3,8 @@
     --color-black: #000;
     --color-primary: #55c57a;
     --color-grey: #777;
-    --margin-bottom: 3rem;
-    --margin-top: 3rem;
-    --margin-right: 2.5rem;
+    --marginY: 3rem;
+    --marginX: 2.5rem;
 }
 
 html {
