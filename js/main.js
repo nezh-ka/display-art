@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#main").animatedModal({
         'color': '#55c57a',
         'animatedIn': 'fadeInUp',
-        'animatedOut': 'fadeOutDown'
+        'animatedOut': 'fadeOutDown',
     });
 
     $("#section1").animatedModal({
