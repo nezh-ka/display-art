@@ -101,46 +101,35 @@ $(document).ready(function() {
     $('div[lang="en"], div[lang="tt"]').css('display', 'none');
 
     $('button:contains("ru")').addClass('active');
-    /* const rus = $('button:contains("ru")');
-    console.log(rus); */
 
     $('button:contains("ru")').click(function() {
-        $(this).addClass('active');
-        $('button:contains("tat"), button:contains("eng")').removeClass('active');
+        // $(this).addClass('active');
+        // $('button:contains("tat"), button:contains("eng")').removeClass('active');
         $('div[lang="ru"]').css('display', 'block');
         $('div[lang="en"], div[lang="tt"]').css('display', 'none');
     });
 
     $('button:contains("eng")').click(function() {
-        $(this).addClass('active');
-        $('button:contains("ru"), button:contains("tat")').removeClass('active');
+        // $(this).addClass('active');
+        // $('button:contains("ru"), button:contains("tat")').removeClass('active');
         $('div[lang="en"]').css('display', 'block');
         $('div[lang="ru"], div[lang="tt"]').css('display', 'none');
     });
 
     $('button:contains("tat")').click(function() {
-        $(this).addClass('active');
-        $('button:contains("ru"), button:contains("eng")').removeClass('active');
+        // $(this).addClass('active');
+        // $('button:contains("ru"), button:contains("eng")').removeClass('active');
         $('div[lang="tt"]').css('display', 'block');
         $('div[lang="ru"], div[lang="en"]').css('display', 'none');
     });
-/* 
-    $('body [lang="en"], [lang="tt"]').css('display', 'none');
-    $('button:contains("ru")').click(function() {
-        $('body [lang="ru"]').css('display', 'block');
-        $('body [lang="en"], [lang="tt"]').css('display', 'none');
-    });
 
-    $('button:contains("eng")').click(function() {
-        $('body [lang="en"]').css('display', 'block');
-        $('body [lang="ru"], [lang="tt"]').css('display', 'none');
-    });
-
-    $('button:contains("tat")').click(function() {
-        $('body [lang="tt"]').css('display', 'block');
-        $('body [lang="ru"], [lang="en"]').css('display', 'none');
-    });  */
+    // Таймер возврата на главную страницу
 
 
+    if ($('.sections').css('opacity') == '1') {
+        setTimeout(function() {
+            $('.close-animatedSectionsRu').trigger('click');
+        }, 10000);
+    }
 
   });
