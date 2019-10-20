@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    if ($('body').width < '604px') {
+        console.log('@@@');
+    }
+
 
     // Анимация модальных окон
     $("#main-ru").animatedModal({

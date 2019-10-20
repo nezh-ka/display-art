@@ -20,8 +20,8 @@ html {
 
 body {
     background: var(--color-primary);
-    /* min-width: 300px; */
-    min-width: 900px;
+    min-width: 576px;
+   /*  min-width: 900px; */
     line-height: 1.5;
 }
 
@@ -76,7 +76,7 @@ body {
     height: 100vh;
     padding-top: 3rem;
     position: relative;
-    /* display: none; */
+    min-width: 576px;
 }
 
 .sections__fn-btns {
@@ -93,7 +93,7 @@ body {
     width: 100%;
     position: absolute;
     top: 60%;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
     text-align: center;
     padding: 0 2.5rem;;
 }
@@ -103,9 +103,9 @@ body {
 }
 
 .section-1, .section-2, .section-3, .section-4 {
-    /* height: 100vh; */
     padding-top: 3rem;
     position: relative;
+    min-width: 576px;
 }
 
 .btns-wrap {
@@ -122,6 +122,36 @@ body {
 
 .section-btn {
     transform: translateX(50%);
+}
+
+@media (max-width: 900px) {
+    .section-btn-wrap {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .section-btn {
+        transform: translateX(0);
+        margin-left: var(--marginX);
+    }
+}
+
+@media (max-width: 796px) {
+    .section-1__content, .section-2__content, .section-3__content, .section-4__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-1__text, .section-2__text, .section-3__text, .section-4__text {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .section-btn {
+        transform: translateX(0);
+        margin-left: 0;
+        margin-right: var(--marginX);
+    }
 }
 
 .section-1__content, .section-2__content, .section-3__content, .section-4__content {
@@ -141,11 +171,41 @@ body {
 .section-1__gallery, .section-2__gallery, .section-3__gallery, .section-4__gallery {
     width: 50%;
     padding: 0 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img-cont {
+    flex-basis: 48%;
+    width: 50%;
+    margin-bottom: var(--marginY);
 }
 
 .section-1__gallery img, .section-2__gallery img, .section-3__gallery img, .section-4__gallery img {
-    width: 48%;
-    display: inline-block;
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 796px) {
+    .section-1, .section-2, .section-3, .section-4 {
+        padding: 2.5rem;
+    }
+    .section-1__content, .section-2__content, .section-3__content, .section-4__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-1__text, .section-2__text, .section-3__text, .section-4__text {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: var(--marginY);
+    }
+
+    .section-1__gallery, .section-2__gallery, .section-3__gallery, .section-4__gallery {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .heading {
