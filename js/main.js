@@ -54,9 +54,9 @@ $(document).ready(function() {
     });
 
     // Таймер возврата на главную страницу
-    if ($('.main .bg-btn').click()) {
+   /*  if ($('.main .bg-btn').click()) {
         setInterval(function() {
             $('.close-animatedSections').trigger('click');
         }, 10000);
-    }
+    } */
   });
