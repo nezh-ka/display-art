@@ -33,46 +33,30 @@ $(document).ready(function() {
     // Галерея
     baguetteBox.run('.section-1__gallery, .section-2__gallery, .section-3__gallery, .section-4__gallery');
 
-    // Таймер возврата на главную страницу
-    console.log("opacity =", $('.sections').css('opacity'), +$('.sections').css('opacity'));
-    // if (+$('.sections').css('opacity') == 0) {
-    //     setInterval(function() {
-    //         $('.close-animatedSectionsRu').trigger('click');
-    //     }, 5000);
-    // }
-
     // Добавление, удаление класса .active
-
-   /*  if ($('div:has(.ru)').css('display') == 'block') {
-        $('button:contains("ru")').addClass('active');
+    $('button:contains("ru")').addClass('active');
+    $('button:contains("ru")').click(function(e) {
+        e.preventDefault();
         $('button:contains("eng"), button:contains("tat")').removeClass('active');
-    }
+        $('button:contains("ru")').addClass('active');
+    });
 
-    if ($('div:has(.tat)').css('display') == 'block') {
-        $('button:contains("tat")').addClass('active');
+    $('button:contains("tat")').click(function(e) {
+        e.preventDefault();
         $('button:contains("ru"), button:contains("eng")').removeClass('active');
-    }
+        $('button:contains("tat")').addClass('active');
+    });
 
-    if ($('div:has(.eng)').css('display') == 'block') {
-        $('button:contains("eng")').addClass('active');
+    $('button:contains("eng")').click(function(e) {
+        e.preventDefault();
         $('button:contains("ru"), button:contains("tat")').removeClass('active');
-    } */
+        $('button:contains("eng")').addClass('active');
+    });
 
-//     $('button:contains("ru"), button:contains("eng"), button:contains("tat")').addClass('active');
-
-//     if ($('div:has(.ru)').css('display') == 'block') {
-//         $('button:contains("ru")').addClass('active');
-//         $('button:contains("eng"), button:contains("tat")').removeClass('active');
-//     }
-
-//     if ($('div:has(.tat)').css('display') == 'block') {
-//         $('button:contains("tat")').addClass('active');
-//         $('button:contains("ru"), button:contains("eng")').removeClass('active');
-//     }
-
-//     if ($('div:has(.eng)').css('display') == 'block') {
-//         $('button:contains("eng")').addClass('active');
-//         $('button:contains("ru"), button:contains("tat")').removeClass('active');
-//     }
-
+    // Таймер возврата на главную страницу
+    if ($('.main .bg-btn').click()) {
+        setInterval(function() {
+            $('.close-animatedSections').trigger('click');
+        }, 10000);
+    }
   });
